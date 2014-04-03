@@ -1,0 +1,352 @@
+/*
+font-family: 'Droid Serif', serif;
+font-family: 'Open Sans', sans-serif;
+*/
+* {box-sizing: border-box;}
+::selection {background:#f7c588;}
+html, body {
+	height: 100%;
+	-webkit-font-smoothing: antialiased !important;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+}
+a, a:link, a:visited, a:focus, a:hover, a:active {
+	color: black;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased !important;
+}
+.container {
+	width: 100%;
+	float: left;	
+}
+ h2 {	
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300
+}
+header {
+	float: left;
+	width: 30%;
+	height: 100%;
+	position: fixed;	
+	padding-right: 50px;
+	background: url("../img/old_prp.jpg") center right;
+	overflow: hidden;	
+}
+
+.hideHead {
+	width: 0%;
+	padding: 0px;
+}
+header ul {
+	margin-top: 50px;
+}
+header ul li {
+	text-align: right;
+	margin: 20px 0;
+	font-size: 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	opacity: .7;
+	
+}
+header .currentPage {
+	text-shadow: 4px 4px 4px #aaa;
+}
+header ul li:hover {
+	opacity: 1;
+}
+header h1 {
+	float: right;
+	font-size: 48px;
+	text-align: right;
+	font-family: 'Droid Serif', serif;
+	font-weight: 400;
+	width: 100%;
+	margin: 0;
+	margin-top: 20px;
+}
+header h2 {
+	float: right;
+	display: block;
+	text-align: right;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300
+}
+
+.img {
+	background-position: 50% 50%;
+	opacity: 1;
+	background-size: cover;
+	float: left;
+	-webkit-transition: opacity .3s ease;
+}
+.img:hover {
+	opacity: .8;	
+	-webkit-transition: opacity 2s cubic-bezier(.31,.97,.13,.98);
+}
+section {
+	float: left;
+	width: 70%;	
+	margin-left: 30%;	
+}
+.extend {
+	width: 100%;
+	margin-left: 0%;
+}
+section #portrait {
+	background-image: url('../img/selfportrait.jpg');
+	background-position: 50% 50%;	
+	background-size: cover;
+	float: left;
+}
+section #win1 {
+	float: right;	
+}
+section #wide {
+	float: left;
+	background-image: url("../img/slave_ship.jpg");	
+}
+section #poem {
+	float: left;
+	width: 34%;	
+}
+section #poem blockquote {
+	line-height: 132%;		
+}
+
+section #last {background-image: url('../img/the_shipwreck.jpg')}
+section #win2 {
+	float: left;	
+}
+
+footer {
+	float: right;
+	text-align: right;	
+	width: 70%;
+	margin: 10px 0;
+	clear: both;
+}
+footer p {
+	display: inline;
+}
+footer ul {
+	display: inline;
+}
+footer ul li {
+	display: inline;
+	margin: 0 20px;
+}
+
+/* ABOUT */
+section.about #portrait {
+	margin: 70px auto; float: none;
+}
+section.about h1 {
+	width: 100%;
+	text-align: center;
+}
+section.about p {
+	padding: 0 40px
+}
+
+/* GALLERY */
+section.gallery {
+	position: relative;	
+	height: 800px;
+}
+section.gallery #fullscreen {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	top: 50px;
+	right: 50px;
+	background-color: rgba(0,0,0,.7);
+	background-image: url('../img/max.svg');
+	z-index: 999;
+	cursor: pointer;
+}
+.iconSwitch {
+	background-image: url('../img/min.svg') !important;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 775px) {
+	header {		
+		width: 100%;
+		height: 180px;
+		position: relative;	
+		padding-right: 0px;
+		background: url("../img/old_prp.jpg") center right;
+	}
+	header ul {
+		margin-top: 10px;
+		text-align: center;
+	}
+	header ul li {
+		text-align: center;
+		margin: 20px 10px;
+		font-size: 20px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		opacity: 1;	
+		display: inline;	
+	}	
+	header .currentPage {
+		text-shadow: 4px 4px 4px #aaa;
+	}
+	
+	header h1 {
+		float: none;
+		font-size: 40px;
+		text-align: center;
+		font-family: 'Droid Serif', serif;
+		font-weight: 400;
+		width: 100%;			
+	}
+	header h2 {
+		float: none;		
+		text-align: center;
+		font-size: 18px;
+		margin: 0;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300
+	}
+	section {
+		float: left;
+		width: 100%;
+		margin-left: 0;		
+	}	
+	section #wide {
+		float: left;
+		background-image: url("../img/slave_ship.jpg");	
+		width: 100% !important
+	}
+	section #poem {
+		float: left;
+		width: 100%;
+		text-align: center;
+		padding: 10px
+	}
+	section.about #portrait {
+		margin: 0; float: none;
+	}
+	section.gallery {		
+		height: 500px;
+	}
+	.anythingSlider .panel {		
+		background-size: 90%;
+		margin-top: 20px;		
+	}
+	.anythingSlider .fade .panel {
+		height: 500px !important;
+	}
+	footer {
+		float: right;
+		text-align: center;	
+		width: 100%;
+		margin: 10px 0;
+		padding: 20px;
+	}
+	footer p {
+		display: block;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 775px) and (max-width: 1080px) {
+	header {
+		float: left;
+		width: 30%;
+		height: 100%;
+		position: fixed;	
+		padding-right: 20px;
+		background: url("../img/old_prp.jpg") center right;
+	}
+
+	header h1 {
+		float: none;
+		font-size: 40px;
+		text-align: right;
+		font-family: 'Droid Serif', serif;
+		font-weight: 400;
+		width: 100%;			
+	}
+	header h2 {
+		float: none;		
+		text-align: right;
+		font-size: 18px;
+		margin: 0;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300
+	}
+	section #poem {
+		float: left;
+		width: 100%;
+		text-align: center;
+		padding: 10px
+	}
+	section.gallery {		
+		height: 600px;
+	}
+	.anythingSlider .panel {		
+		background-size: 90%;
+		margin-top: 20px;				
+	}
+	.anythingSlider .fade .panel {
+		height: 600px !important;
+	}
+	footer {
+		padding: 20px;
+		text-align: center;
+	}
+	footer p {
+		display: block;
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 1080px) and (max-width: 1525px) {
+	header {
+		float: left;
+		width: 30%;
+		height: 100%;
+		position: fixed;	
+		padding-right: 20px;
+		background: url("../img/old_prp.jpg") center right;
+	}
+
+	header h1 {
+		float: none;
+		font-size: 40px;
+		text-align: right;
+		font-family: 'Droid Serif', serif;
+		font-weight: 400;
+		width: 100%;			
+	}
+	header h2 {
+		float: none;		
+		text-align: right;
+		font-size: 18px;
+		margin: 0;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300
+	}
+	section #poem {
+		float: left;
+		width: 100%;
+		text-align: center;
+		padding: 10px
+	}
+	section.gallery {		
+		height: 700px;
+	}
+	.anythingSlider .panel {		
+		background-size: auto;
+		margin-top: 20px;				
+	}
+	.anythingSlider .fade .panel {
+		height: 700px !important;
+	}
+
+}
